@@ -190,34 +190,10 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
 
-        cal.set(Calendar.HOUR_OF_DAY, 9);
-        Log.d("MainActivity", "Nine");
-        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
-
         cal.set(Calendar.HOUR_OF_DAY, 12);
-        Log.d("MainActivity", "Twelve");
-        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
-
-        cal.set(Calendar.HOUR_OF_DAY, 15);
-        Log.d("MainActivity", "Three");
-        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
-
-        cal.set(Calendar.HOUR_OF_DAY, 18);
-        Log.d("MainActivity", "Six");
-        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
-
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
-
-        cal.set(Calendar.HOUR_OF_DAY, 21);
         Log.d("MainActivity", "Nine");
         Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
-
+        Log.d("MainActivity", String.valueOf(System.currentTimeMillis()));
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
     }
 
