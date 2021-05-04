@@ -182,8 +182,43 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent.FLAG_UPDATE_CURRENT
         );
         AlarmManager alarmManager = (AlarmManager) this.getSystemService(ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 5000, 60000, notifyPendingIntent);
 
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(System.currentTimeMillis());
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        cal.set(Calendar.HOUR_OF_DAY, 9);
+        Log.d("MainActivity", "Nine");
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
+
+        cal.set(Calendar.HOUR_OF_DAY, 12);
+        Log.d("MainActivity", "Twelve");
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
+
+        cal.set(Calendar.HOUR_OF_DAY, 15);
+        Log.d("MainActivity", "Three");
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
+
+        cal.set(Calendar.HOUR_OF_DAY, 18);
+        Log.d("MainActivity", "Six");
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
+
+        cal.set(Calendar.HOUR_OF_DAY, 21);
+        Log.d("MainActivity", "Nine");
+        Log.d("MainActivity", String.valueOf(cal.getTimeInMillis()));
+
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, notifyPendingIntent);
     }
 
     @Override
