@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980008090445",
+    "project_id": "water-records-26e76",
+    "storage_bucket": "water-records-26e76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980008090445:android:421aef88de4669126a5504",
+        "android_client_info": {
+          "package_name": "edu.lewisu.cs.bprice.watertracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980008090445-gq7cs7dpjq6fsjfqs6h852vdu1hq8221.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhrRBQ33-PxVGjkLFc0dATgikeNk_trKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980008090445-gq7cs7dpjq6fsjfqs6h852vdu1hq8221.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
