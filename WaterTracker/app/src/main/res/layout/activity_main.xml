@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/AppToolBar"
+            app:titleTextAppearance="@style/CustomTextFont"
+            app:title="@string/app_name"/>
+<!--            app:menu="@menu/options_menu"-->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/amount_left_for_today"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/amountLeftForToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/_1000ml"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/amount_drunk_today"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/amountHadToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="@string/_1000ml"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="75dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/add"
+                android:textSize="20sp"
+                android:padding="0dp"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/addedToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/amount_added_due_to_heat"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/amountAddedToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/_1000ml"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/recycle_border"
+                android:padding="1dp"
+                />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
